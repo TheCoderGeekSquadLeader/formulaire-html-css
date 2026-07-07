@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/scss/style.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <div class="form">
+
+        <div class="form__title">Formulaire de connexion</div>
+        <form class="form__body" action="assets/php/form.php">
+            <input type="text" name="nom" placeholder="Nom" required>
+
+            <input type="text" name="prenom" placeholder="Prénoms" required>
+
+            <input type="email" name="mail" placeholder="Mail" required>
+
+            <input type="number" name="phone" placeholder="Téléphone" required>
+
+            <select name="filiere" required>
+                <option value="" disabled selected hidden>Sélectionnez une filière ou un domaine</option>
+                <option>IA & GL</option>
+                <option>Marketing digital</option>
+                <option>Management de projet</option>
+                <option>Finance digital</option>
+            </select>
+
+            <select name="filiere" required>
+                <option value="" disabled selected hidden>Sélectionnez un niveau d'étude</option>
+                <option>Licence 1</option>
+                <option>Licence 2</option>
+                <option>Licence 3</option>
+                <option>Master 1</option>
+                <option>Master 2</option>
+            </select>
+
+            <textarea name="message" placeholder="Message ou motivation"></textarea>
+
+            <div class="buttons">
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

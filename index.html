@@ -40,16 +40,37 @@
 
             <textarea name="entry.1139654730" placeholder="Message ou motivation"></textarea>
 
-            <input type="hidden" name="fvv" value="1">
-            <input type="hidden" name="pageHistory" value="0">
-            <input type="hidden" name="fbzx" value="-6828963690026238139">
-            <input type="hidden" name="partialResponse" value="[null,null,&quot;-6828963690026238139&quot;]">
-
             <div class="buttons">
                 <button type="submit">Envoyer</button>
             </div>
         </form>
     </div>
+
+    <script>
+        document.getElementById('monFormulaire').addEventListener('submit', function(e) {
+            e.preventDefault();
+re
+            const formData = new FormData(this);
+            const url = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfJoCTYIv2o9ziTm334eWUgiGy8nFI4mfga-zu9zGOP_n6V9Q/formResponse';
+
+            // Envoyer en mode no-cors
+            fetch(url, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            })
+            .then(() => {
+                document.getElementById('confirmation').style.display = 'block';
+                this.reset();
+                setTimeout(() => {
+                    document.getElementById('confirmation').style.display = 'none';
+                }, 5000);
+            })
+            .catch(() => {
+                alert('Une erreur est survenue, veuillez réessayer.');
+            });
+        });
+    </script>
 </body>
 
 </html>

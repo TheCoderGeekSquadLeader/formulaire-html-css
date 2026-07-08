@@ -12,7 +12,10 @@
     <div class="form">
 
         <div class="form__title">Formulaire de connexion</div>
-        <form class="form__body" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfJoCTYIv2o9ziTm334eWUgiGy8nFI4mfga-zu9zGOP_n6V9Q/formResponse" method="POST" target="_blank">
+        <form class="form__body" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfJoCTYIv2o9ziTm334eWUgiGy8nFI4mfga-zu9zGOP_n6V9Q/formResponse" method="POST" target="hidden_iframe" onsubmit="submitSuccess()">
+
+            <iframe name="hidden_iframe" style="display:none;"></iframe>
+            
             <input type="text" name="entry.146114386" placeholder="Nom" required>
 
             <input type="text" name="entry.9472417" placeholder="Prénoms" required>
@@ -28,7 +31,7 @@
                 <option>Management de projet</option>
                 <option>Finance digital</option>
             </select>
-
+            
             <select name="entry.100974411" required>
                 <option value="" disabled selected hidden>Sélectionnez un niveau d'étude</option>
                 <option>Licence 1</option>
@@ -37,8 +40,11 @@
                 <option>Master 1</option>
                 <option>Master 2</option>
             </select>
-
+            
             <textarea name="entry.1139654730" placeholder="Message ou motivation"></textarea>
+
+            <input type="hidden" name="fvv" value="1">
+            <input type="hidden" name="pageHistory" value="0">
 
             <div class="buttons">
                 <button type="submit">Envoyer</button>

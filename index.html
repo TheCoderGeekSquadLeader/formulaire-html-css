@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -10,67 +10,40 @@
 
 <body>
     <div class="form">
-
         <div class="form__title">Formulaire de connexion</div>
         <form class="form__body"
             action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfJoCTYIv2o9ziTm334eWUgiGy8nFI4mfga-zu9zGOP_n6V9Q/formResponse"
             method="POST" target="_blank">
 
-            <input type="text" name="entry.146114386" placeholder="Nom" required>
-            <input type="text" name="entry.9472417" placeholder="Prénoms" required>
-            <input type="email" name="entry.254294016" placeholder="Mail" required>
-            <input type="number" name="entry.1699215128" placeholder="Téléphone" required>
+            <input type="text" name="entry.1736146112" placeholder="Nom" required>
+            <input type="text" name="entry.1642861954" placeholder="Prénoms" required>
+            <input type="email" name="entry.1028413031" placeholder="Mail" required>
+            <input type="number" name="entry.1947151414" placeholder="Téléphone" required>
 
-            <select name="entry.1487673860" required>
+            <select name="entry.931164193" required>
                 <option value="" disabled selected hidden>Sélectionnez une filière ou un domaine</option>
-                <option>IA & GL</option>
-                <option>Marketing digital</option>
-                <option>Management de projet</option>
-                <option>Finance digital</option>
+                <option value="IA & GL">IA & GL</option>
+                <option value="Marketing digital">Marketing digital</option>
+                <option value="Management de projet">Management de projet</option>
+                <option value="Finance digital">Finance digital</option>
             </select>
 
-            <select name="entry.100974411" required>
+            <select name="entry.397341476" required>
                 <option value="" disabled selected hidden>Sélectionnez un niveau d'étude</option>
-                <option>Licence 1</option>
-                <option>Licence 2</option>
-                <option>Licence 3</option>
-                <option>Master 1</option>
-                <option>Master 2</option>
+                <option value="Licence 1">Licence 1</option>
+                <option value="Licence 2">Licence 2</option>
+                <option value="Licence 3">Licence 3</option>
+                <option value="Master 1">Master 1</option>
+                <option value="Master 2">Master 2</option>
             </select>
 
-            <textarea name="entry.1139654730" placeholder="Message ou motivation"></textarea>
+            <textarea name="entry.535403331" placeholder="Message ou motivation"></textarea>
 
             <div class="buttons">
                 <button type="submit">Envoyer</button>
             </div>
         </form>
     </div>
-
-    <script>
-        document.getElementById('monFormulaire').addEventListener('submit', function(e) {
-            e.preventDefault();
-re
-            const formData = new FormData(this);
-            const url = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfJoCTYIv2o9ziTm334eWUgiGy8nFI4mfga-zu9zGOP_n6V9Q/formResponse';
-
-            // Envoyer en mode no-cors
-            fetch(url, {
-                method: 'POST',
-                mode: 'no-cors',
-                body: formData
-            })
-            .then(() => {
-                document.getElementById('confirmation').style.display = 'block';
-                this.reset();
-                setTimeout(() => {
-                    document.getElementById('confirmation').style.display = 'none';
-                }, 5000);
-            })
-            .catch(() => {
-                alert('Une erreur est survenue, veuillez réessayer.');
-            });
-        });
-    </script>
 </body>
 
 </html>
